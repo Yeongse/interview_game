@@ -3,7 +3,7 @@ from init_database import Base
 from datetime import datetime
 
 
-class Characters(Base):
+class Character(Base):
     __tablename__ = "characters"
     id          = Column(Integer,primary_key=True,autoincrement=True)
     name        = Column(Text,unique=True)
@@ -17,7 +17,7 @@ class Characters(Base):
         self.personality = personality
         self.experience  = experience
 
-class Companies(Base):
+class Company(Base):
     __tablename__ = "companies"
     id   = Column(Integer,primary_key=True,autoincrement=True)
     name = Column(Text,unique=True)
@@ -25,11 +25,11 @@ class Companies(Base):
     def __init__(self,name):
         self.name = name
 
-class Members(Base):
+class Member(Base):
     __tablename__ = "members"
     id           = Column(Integer,primary_key=True,autoincrement=True)
     HP           = Column(Integer)
-    name         = Column(Text,unique=True)
+    name         = Column(Text)
     position     = Column(Text)
     personality  = Column(Text)
     company_name = Column(Text)
