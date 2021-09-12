@@ -79,3 +79,11 @@ class Member(Base):
         self.name         = name
         self.position     = position
         self.personality  = personality
+
+class Feedback(Base):
+    __tablename__ = "feedbacks"
+    id   = Column(Integer,primary_key=True,autoincrement=True)
+    text = Column(Text)
+
+    def __init__(self,text):
+        self.text = text

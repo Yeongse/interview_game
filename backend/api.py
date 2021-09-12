@@ -8,14 +8,20 @@ app = Flask(__name__)
 app.config['JSON_AS_ASCII'] = False
 CORS(app)
 
+@app.route("/")
+def start():
+  return 0
 
-@app.route("/",methods=["GET"])
+@app.route("/game",methods=["GET","POST"])
 def game():
   return 0
 
 @app.route("/feedback",methods=["GET","POST"])
 def feedback():
-  return 0
+  if request.method == "GET":
+    return 0
+  if request.method == "POST":
+    return  0
 
 
 #app.pyをターミナルから直接呼び出した時だけ、app.run()を実行する
