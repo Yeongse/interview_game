@@ -6,9 +6,9 @@ import {
   Route,
   Link
 } from 'react-router-dom';
-import Home from "./comp_home";
-import Game from "./comp_game";
-import Feedback from "./comp_feedback"
+import Home from "./comp_Home";
+import Game from "./comp_Game";
+import Feedback from "./comp_Feedback";
 
 
 function App() {
