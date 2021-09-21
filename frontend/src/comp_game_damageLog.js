@@ -5,7 +5,7 @@ class DamageLog extends React.Component{
     render(){
         return(
             <div>
-                <h1>Damageです</h1>
+                <h1>DamageLogです</h1>
             </div>
         )
     }

@@ -1,7 +1,7 @@
 from init_database import db_session
-from models import Character,Company,Member,Question
+from models import Character,Company,Member,Question,Answer
 
-members = Member.query.all()
+answers = Answer.query.all()
 
-for member in members:
-    print(member.name)
+for answer in answers:
+    print(answer.text)
