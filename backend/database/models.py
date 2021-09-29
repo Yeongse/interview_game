@@ -1,8 +1,6 @@
-from enum import auto
-from sqlalchemy import Column, Integer, String, Text, DateTime
+from sqlalchemy import Column, Integer, Text, DateTime
 from sqlalchemy.sql.schema import ForeignKey
 from init_database import Base
-from datetime import datetime
 
 
 class Character(Base):
@@ -79,6 +77,7 @@ class Member(Base):
         self.name         = name
         self.position     = position
         self.personality  = personality
+
 
 class Feedback(Base):
     __tablename__ = "feedbacks"

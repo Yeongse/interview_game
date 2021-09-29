@@ -1,6 +1,6 @@
 import React from "react";
-import FeedbackForm from "./comp_feedbackForm";
-import FeedbackList from "./comp_feedbackList";
+import FeedbackForm from "./feedbackForm";
+import FeedbackList from "./feedbackList";
 
 class Feedback extends React.Component{
     render(){

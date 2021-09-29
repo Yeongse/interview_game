@@ -3,10 +3,12 @@ import json
 from flask_cors import CORS
 from database.init_database import db_session
 
+
 #default config
 app = Flask(__name__)
 app.config['JSON_AS_ASCII'] = False
 CORS(app)
+
 
 @app.route("/")
 def start():
@@ -18,9 +20,14 @@ def game():
 
 @app.route("/feedback",methods=["GET","POST"])
 def feedback():
-  if request.method == "GET":
-    return 0
-  if request.method == "POST":
+  from database.models import Feedback
+  if(request.method == "GET"):
+    feedbacks = Feedback.query().all()
+    feedbacks = feedbacks.text
+    return jsonify({"feedback":feedbacks})
+
+
+  if(request.method == "POST"):
     return  0
 
 

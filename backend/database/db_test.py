@@ -1,7 +1,7 @@
 from init_database import db_session
-from models import Character,Company,Member,Question,Answer
+from models import Character,Company,Member,Question,Answer,Feedback
 
-answers = Answer.query.all()
+feedbacks = Feedback.query.all()
 
-for answer in answers:
-    print(answer.text)
+for feedback in feedbacks:
+    print(feedback.text)

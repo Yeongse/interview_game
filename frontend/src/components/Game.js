@@ -1,16 +1,16 @@
 import React from "react";
 import axios from "axios";
 
-import Image        from "./comp_game_image";
-import Frame        from "./comp_frame";
-import FirstMessage from "./comp_game_firstMessage";
-import FinalMessage from "./comp_game_finalMessage";
-import StartLog     from "./comp_game_startLog";
-import FinishLog    from "./comp_game_finishLog";
-import DamageLog    from "./comp_game_damageLog";
-import QuestionLog  from "./comp_game_questionLog";
-import AnswerLog    from "./comp_game_answerLog";
-import AnswerList   from "./comp_game_answerList";
+import Image        from "./game_image";
+import Frame        from "./frame";
+import FirstMessage from "./game_firstMessage";
+import FinalMessage from "./game_finalMessage";
+import StartLog     from "./game_startLog";
+import FinishLog    from "./game_finishLog";
+import DamageLog    from "./game_damageLog";
+import QuestionLog  from "./game_questionLog";
+import AnswerLog    from "./game_answerLog";
+import AnswerList   from "./game_answerList";
 
 
 class Game extends React.Component{
