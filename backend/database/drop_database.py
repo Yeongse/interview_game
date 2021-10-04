@@ -1,4 +1,8 @@
-from init_database import db_session
-from init_database import drop_db
+from init_database import Base,engine
+import models
+
+def drop_db():
+    import models
+    Base.metadata.drop_all(bind=engine)
 
 drop_db()

@@ -9,28 +9,22 @@ class FeedbackList extends React.Component{
     }
 
     componentDidMount(){
-        axios.get("http://localhost:5000").then(res => {
-            const data_gotten = res.data;
-            console.log(data_gotten.names);
-            this.setState({feedbacks:data_gotten.names});
-            console.log(this.state);
+        axios.get("http://localhost:5000/feedback").then(res => {
+            const fetched_data = res.data;
+            this.setState({feedbacks:fetched_data.comments});
         })
     }
 
     render(){
         return(
-            <div className="FeedbackList">
-                <header className="ListHeader">
+            <div className="feedbackList">
+                <header className="listHeader">
                     <h1>過去のフィードバック</h1>
                 </header>
                 <div>
-                    {this.state.feedbacks.map((element, i) => 
-                    <div className="cardWrapper">
-                        <div className="card" key={i}>
-                            <div className="card-content">
-                                <p className="card-title">{element}</p>
-                            </div>
-                        </div>
+                    {this.state.feedbacks.map((element) => 
+                    <div className="card">
+                        <p className="cardContent">{element}</p>
                     </div>
                     )}
                 </div>

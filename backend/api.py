@@ -1,6 +1,7 @@
 from flask import Flask,jsonify,request
 import json
 from flask_cors import CORS
+from database.models import Feedback
 from database.init_database import db_session
 
 
@@ -8,7 +9,6 @@ from database.init_database import db_session
 app = Flask(__name__)
 app.config['JSON_AS_ASCII'] = False
 CORS(app)
-
 
 @app.route("/")
 def start():
@@ -20,15 +20,18 @@ def game():
 
 @app.route("/feedback",methods=["GET","POST"])
 def feedback():
-  from database.models import Feedback
-  if(request.method == "GET"):
-    feedbacks = Feedback.query().all()
-    feedbacks = feedbacks.text
-    return jsonify({"feedback":feedbacks})
-
-
   if(request.method == "POST"):
-    return  0
+    sent_data = request.get_json().comments
+    content   = Feedback(sent_data)
+    print(sent_data)
+    db_session.add(content)
+    db_session.commit()
+  
+  feedbacks = []
+  fetched_data = Feedback.query.all()
+  for feedback in fetched_data:
+    feedbacks.append(feedback.text)
+  return jsonify({"comments":feedbacks})
 
 
 #app.pyをターミナルから直接呼び出した時だけ、app.run()を実行する

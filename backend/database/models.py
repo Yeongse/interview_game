@@ -1,7 +1,6 @@
 from sqlalchemy import Column, Integer, Text, DateTime
 from sqlalchemy.sql.schema import ForeignKey
-from init_database import Base
-
+from database.init_database import Base
 
 class Character(Base):
     __tablename__ = "characters"
