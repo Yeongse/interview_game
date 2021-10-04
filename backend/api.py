@@ -18,12 +18,13 @@ def start():
 def game():
   return 0
 
+
+#ここについては完成
 @app.route("/feedback",methods=["GET","POST"])
 def feedback():
   if(request.method == "POST"):
-    sent_data = request.get_json().comments
+    sent_data = request.json["comments"]
     content   = Feedback(sent_data)
-    print(sent_data)
     db_session.add(content)
     db_session.commit()
   
