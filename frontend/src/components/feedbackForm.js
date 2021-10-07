@@ -21,7 +21,6 @@ class FeedbackForm extends React.Component{
            comments:this.state.value
        }
        axios.post("http://localhost:5000/feedback", data).then((res)=>{
-       // 送信成功時の処理
        console.log(res);
        this.setState({value:""});
        })

@@ -4,8 +4,10 @@ import React from "react";
 class FinalMessage extends React.Component{
     render(){
         return(
-            <div>
-                <h1>FinalMessageです</h1>
+            <div className="message-wrapper">
+                <p>
+                    私は{this.props.background}の{this.self.name}です。
+                </p>
             </div>
         )
     }

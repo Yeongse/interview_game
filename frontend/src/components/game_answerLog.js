@@ -5,7 +5,7 @@ class AnswerLog extends React.Component{
     render(){
         return(
             <div>
-                <h1>Answerです</h1>
+                <h1>AnswerLogです</h1>
             </div>
         )
     }

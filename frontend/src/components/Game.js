@@ -3,6 +3,7 @@ import axios from "axios";
 
 import Image        from "./game_image";
 import Frame        from "./frame";
+import CharacterSelect from "./game_characterSelect";
 import FirstMessage from "./game_firstMessage";
 import FinalMessage from "./game_finalMessage";
 import StartLog     from "./game_startLog";
@@ -21,14 +22,20 @@ class Game extends React.Component{
         this.componentController = this.componentController.bind(this);
     }
 
+    componentDidMount(){
+        axios.get("http://localhost:5000/game").then(res => {
+            const fetched_data = res.data;
+            this.setState({gameParams:fetched_data});
+        })
+    }
+
     countClick(){
         this.setState({"phase":this.state.phase+1});
     }
 
-
     componentController(){
         switch(this.state.phase){
-            case 0: return <FirstMessage/>; break; 
+            case 0: return <FirstMessage　characterAndCompany />; break; 
             case 1: return <StartLog/>; break;
             case 2: return <QuestionLog/>; break;
             case 3: return <AnswerList/>; break;
@@ -42,13 +49,12 @@ class Game extends React.Component{
     render(){
         return(
             <div>
-                <button onClick={this.countClick}>Gameです(今のフェイズ:{this.state.phase})</button>
                 <Frame />
                 <Image />
-
                 <div className="variable">
                     {this.componentController()}
                 </div>
+                <button onClick={this.countClick}>次に進む(今のフェイズ:{this.state.phase})</button>
             </div>
         )
     }

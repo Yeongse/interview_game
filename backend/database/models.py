@@ -5,18 +5,18 @@ from database.init_database import Base
 class Character(Base):
     __tablename__ = "characters"
     id          = Column(Integer,primary_key=True,autoincrement=True)
-    props       = Column(Integer)
+    image_src   = Column(Text)
     name        = Column(Text,unique=True)
     background  = Column(Text)
+    skill       = Column(Text)
     personality = Column(Text)
-    experience  = Column(Text)
 
-    def __init__(self,props,name,background,personality,experience):
-        self.props       = props
+    def __init__(self,image_src,name,background,skill,personality):
+        self.image_src   = image_src
         self.name        = name
         self.background  = background
+        self.skill       = skill
         self.personality = personality
-        self.experience  = experience
 
 
 class Company(Base):
@@ -30,16 +30,11 @@ class Company(Base):
         self.name  = name
 
 
-class QuestionGroup(Base):
-    __tablename__ = "question_groups"
-    id = Column(Integer,primary_key=True,autoincrement=True)
-
-
 class Question(Base):
     __tablename__ = "questions"
     id                = Column(Integer,primary_key=True,autoincrement=True)
-    question_group_id = Column(Integer,ForeignKey("question_groups.id"))
-    text  = Column(Text)
+    question_group_id = Column(Integer)
+    text     = Column(Text)
 
     def __init__(self,question_group_id,text):
         self.question_group_id = question_group_id
@@ -50,26 +45,26 @@ class Answer(Base):
     __tablename__ = "answers"
     id          = Column(Integer,primary_key=True,autoincrement=True)
     question_id = Column(Integer,ForeignKey("questions.id"))
-    props = Column(Integer)
-    text  = Column(Text)
+    text = Column(Text)
 
-    def __init__(self,question_id,props,text):
+    def __init__(self,question_id,text):
         self.question_id = question_id
-        self.props = props
         self.text  = text
 
 
 class Member(Base):
     __tablename__ = "members"
     id                = Column(Integer,primary_key=True,autoincrement=True)
+    image_src         = Column(Text)
     company_id        = Column(Integer,ForeignKey("companies.id"))
-    question_group_id = Column(Integer,ForeignKey("question_groups.id"))
+    question_group_id = Column(Integer)
     HP           = Column(Integer)
     name         = Column(Text)
     position     = Column(Text)
     personality  = Column(Text)
 
-    def __init__(self,company_id,question_group_id,HP,name,position,personality):
+    def __init__(self,image_src,company_id,question_group_id,HP,name,position,personality):
+        self.image_src         = image_src
         self.company_id        = company_id
         self.question_group_id = question_group_id
         self.HP           = HP
