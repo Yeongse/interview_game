@@ -14,7 +14,7 @@ class FirstMessage extends React.Component{
 
 
     render(){
-        if(this.this.state.phase === 0){
+        if(this.state.phase === 0){
             return(
                 <div className="message-wrapper"　onClick={this.countClick}>
                 <p>
