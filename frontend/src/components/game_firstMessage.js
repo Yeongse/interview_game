@@ -15,13 +15,14 @@ class FirstMessage extends React.Component{
 
     render(){
         if(this.state.phase === 0){
+            console.log(this.props);
             return(
                 <div className="message-wrapper"　onClick={this.countClick}>
-                <p>
-                    私は{this.props.character.background}の{this.props.character.name}です。
-                    今回は{this.props.company.genre}の{this.props.company.name}にエントリーします！
-                    内定獲得を目指してがんるぞ！
-                </p>
+                    <p>
+                        私は{this.props.character.background}の{this.props.character.name}です。
+                        今回は{this.props.company.genre}の{this.props.company.name}にエントリーします！
+                        内定獲得を目指してがんるぞ！
+                    </p>
             </div>
             );
         }
@@ -29,17 +30,17 @@ class FirstMessage extends React.Component{
         if(this.state.phase === 1){
             return(
                 <div className="message-wrapper" onClick={this.countClick}>
-                <p>
-                    名前：{this.props.character.name}、学歴：{this.props.character.background}、スキル：{this.props.character.experience}、
-                    人物像:{this.props.character.personality}
-                </p>
+                    <p>
+                        名前：{this.props.character.name}、学歴：{this.props.character.background}、スキル：{this.props.character.experience}、
+                        人物像:{this.props.character.personality}
+                    </p>
             </div>
             );
         }
         else{
             return(
-                <div className="message-wrapper">
-                    <p>次に進んでください</p>
+                <div className="message-wrapper" onClick={this.props.forChange}>
+                    <p>(次に進んでください)</p>
                 </div>
             )
         }
