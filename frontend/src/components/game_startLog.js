@@ -18,7 +18,7 @@ class StartLog extends React.Component{
             return(
                 <div className="message-wrapper"　onClick={this.countClick}>
                     <p>
-                        ({this.props.step+1}回目の面接です。)
+                        ({this.props.phase+1}回目の面接です。)
                     </p>
             </div>
             );

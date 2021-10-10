@@ -4,7 +4,7 @@ import React from "react";
 class DamageLog extends React.Component{
     render(){
         return(
-            <div>
+            <div onClick={this.props.forChange}>
                 <h1>DamageLogです</h1>
             </div>
         )

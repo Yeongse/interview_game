@@ -5,7 +5,10 @@ class AnswerList extends React.Component{
     render(){
         return(
             <div>
-                <h1>AnswerListです</h1>
+                <button onClick={this.props.forChange0}>{this.props.answers.text[this.props.phase*4]}</button>
+                <button onClick={this.props.forChange1}>{this.props.answers.text[this.props.phase*4+1]}</button>
+                <button onClick={this.props.forChange2}>{this.props.answers.text[this.props.phase*4+2]}</button>
+                <button onClick={this.props.forChange3}>{this.props.answers.text[this.props.phase*4+3]}</button>
             </div>
         )
     }
