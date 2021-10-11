@@ -73,7 +73,7 @@ class Interview extends React.Component{
                     break;
             case 2: return <AnswerList   phase={this.props.interviewPhase} answers={this.props.gameParams.answers} forChange0={this.getAnswer0} forChange1={this.getAnswer1} forChange2={this.getAnswer2} forChange3={this.getAnswer3}/>;
                     break;
-            case 3: return <AnswerLog    givenAnswer={this.props.gameParams.answer[4*this.props.interviewPhase+this.props.chosenNumber]} forChange={this.addGamePhase}/>; 
+            case 3: return <AnswerLog    phase={this.props.interviewPhase} chosenNumber={this.props.chosenNumber} gameParams={this.props.gameParams} forChange={this.addGamePhase}/>; 
                     break;
             case 4: return <DamageLog    forChange={this.addGamePhase}/>; 
                     break;
