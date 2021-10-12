@@ -55,7 +55,6 @@ class AnswerLog extends React.Component{
                             <p>
                                 まだ少し抽象的ですが、まあ良いでしょう。
                                 たくさんのお話をありがとうございました。大変参考になりました。
-                                では次の質問に移ります。
                             </p>
                         </div>
                     );
@@ -107,7 +106,6 @@ class AnswerLog extends React.Component{
                                 なるほど、ありがとうございます。
                                 ちなみにマクロは文字を大きくすることではないですよ。
                                 今行ったことは実際の業務で使う機能だと思うので、ぜひ勉強してみてください。
-                                では次の質問に移ります。
                             </p>
                         </div>
                     );
@@ -125,7 +123,7 @@ class AnswerLog extends React.Component{
                             </p>
                     </div>
                     );
-                    }
+                }
                 else
                 if(this.state.phase === 1){
                     return(
@@ -178,7 +176,6 @@ class AnswerLog extends React.Component{
                             <p>
                                 なるほど、あなた自身で考えたというわけではないのですね。
                                 ただ、ネットの情報を活用する力も非常に大事だと思いますよ。
-                                では次の質問に移ります。
                             </p>
                         </div>
                     );
@@ -196,7 +193,7 @@ class AnswerLog extends React.Component{
                             </p>
                     </div>
                     );
-                    }
+                }
                 else
                 if(this.state.phase === 1){
                     return(
@@ -253,19 +250,311 @@ class AnswerLog extends React.Component{
                                 ゲームは競技人口が増えるほど娯楽としての価値や競技生も高まるので、
                                 コミュニティの形成や配信に着眼した点は素晴らしいと思います。
                                 あなたの分析力や思考力、洞察力をぜひ弊社でも生かしていただきたいです。
-                                では次の質問に移ります。
                             </p>
                         </div>
                     );
                 }
-                    break;
+                break;
             
-            case 5: return 5; break;
-            case 6: return 6; break;
-            case 7: return 7; break;
-            case 8: return 8; break;
-            case 9: return 9; break;
-            case 10: return 10; break;
+            case 5:
+                if(this.state.phase === 0){
+                    return(
+                        <div className="message-wrapper"　onClick={this.countClick}>
+                            <p>
+                                私が御社を志望した理由は安定性を求めたからです。
+                                やっぱり新卒で入って長く続けられるのは魅力だと思うので、
+                                定年まで御社で安定した働き方をしたいと考えています。
+                            </p>
+                    </div>
+                    );
+                }
+                else
+                if(this.state.phase === 1){
+                    return(
+                        <div className="message-wrapper" onClick={this.countClick}>
+                            <p>
+                               弊社を安定した会社と見ていただき、嬉しいですね。
+                               最近の新卒はすぐに辞める人が多いので、あなたのように続けてくれる人は歓迎です。
+                               ただ、最近終身雇用というシステムがなくなるということはご存知なかったのでしょうか？ 
+                            </p>
+                    </div>
+                    );
+                }
+                else
+                if(this.state.phase === 2){
+                    return(
+                        <div className="message-wrapper" onClick={this.countClick}>
+                            <p>
+                                え、終身雇用って無くなるんですか？
+                                まあ途中で辞めるとしてもある程度長くは働けそうなので大丈夫です。
+                                クビにならない限りは続けます。
+                            </p>
+                        </div>
+                    );
+                }
+                else
+                if(this.state.phase === 3){
+                    return(
+                        <div className="message-wrapper" onClick={this.props.forChange}>
+                            <p>
+                                強い意志をありがとうございます。
+                                勝手に辞めないというのはこちらとしても非常に採用しやすいですね。
+                                今日はたくさんの話をありがとうございました。
+                            </p>
+                        </div>
+                    );
+                    }
+                break;
+
+            case 6:
+                if(this.state.phase === 0){
+                    return(
+                        <div className="message-wrapper"　onClick={this.countClick}>
+                            <p>
+                                私が御社を志望した理由は他のどの企業にも受からなかったからです。
+                                不動産、金融、インフラなど様々な業界を志望しましたが、全て落ちました。
+                                就職浪人するかもしれない危機の中、御社の求人を見かけたので応募しました。
+                            </p>
+                    </div>
+                    );
+                }
+                else
+                if(this.state.phase === 1){
+                    return(
+                        <div className="message-wrapper" onClick={this.countClick}>
+                            <p>
+                               たくさんの選考に応募されているんですね。
+                               何度でも内定獲得を目指して応募を続けるメンタルの強さには感心します。
+                               正直に話してくださるところもポイントが高いです。
+                               ちなみに他の企業で選考に通らなかった理由は自分では何と考えますか？
+                            </p>
+                    </div>
+                    );
+                }
+                else
+                if(this.state.phase === 2){
+                    return(
+                        <div className="message-wrapper" onClick={this.countClick}>
+                            <p>
+                                え、終身雇用って無くなるんですか？
+                                まあ途中で辞めるとしてもある程度長くは働けそうなので大丈夫です。
+                                クビにならない限りは続けます。
+                            </p>
+                        </div>
+                    );
+                }
+                else
+                if(this.state.phase === 3){
+                    return(
+                        <div className="message-wrapper" onClick={this.props.forChange}>
+                            <p>
+                                強い意志をありがとうございます。
+                                勝手に辞めないというのはこちらとしても非常に採用しやすいですね。
+                                今日はたくさんの話をありがとうございました。
+                            </p>
+                        </div>
+                    );
+                    }
+                break;
+            
+            case 7:
+                if(this.state.phase === 0){
+                    return(
+                        <div className="message-wrapper"　onClick={this.countClick}>
+                            <p>
+                                私が御社を志望した理由は、御社こそ私が成長できる環境であると考えたからです。
+                                私は向上心に溢れており、どんな時もスキルアップを目指しています。
+                                御社での勤務を通じて私は優秀なビジネスマンになりたいです。
+                            </p>
+                    </div>
+                    );
+                }
+                else
+                if(this.state.phase === 1){
+                    return(
+                        <div className="message-wrapper" onClick={this.countClick}>
+                            <p>
+                                弊社にそのような成長環境があると仰って頂き感激です。
+                                実際のところは弊社は赤字が続いており、優秀な人材もほとんどいません。
+                                あなたに対して成長環境を提供できるかは正直自信がないです。
+                            </p>
+                    </div>
+                    );
+                }
+                else
+                if(this.state.phase === 2){
+                    return(
+                        <div className="message-wrapper" onClick={this.countClick}>
+                            <p>
+                                そんなことはないと思いますよ。
+                                万年赤字の御社を私の力で黒字にしたいと考えており、
+                                この経験はまたとない成長の機会になると考えています。
+                            </p>
+                        </div>
+                    );
+                }
+                else
+                if(this.state.phase === 3){
+                    return(
+                        <div className="message-wrapper" onClick={this.props.forChange}>
+                            <p>
+                                大変頼もしいお言葉をありがとうございます。
+                                あなたは弊社できっとご活躍いただけると思います。
+                                荷が重いかもしれませんがお願いしますね。
+                            </p>
+                        </div>
+                    );
+                    }
+                break;
+                
+            case 8:
+                if(this.state.phase === 0){
+                    return(
+                        <div className="message-wrapper"　onClick={this.countClick}>
+                            <p>
+                                私が御社を志望した理由は、御社の経営理念に惹かれたからです。
+                                御社の経営理念である「衣食住の食を極める」がとても心に響きました。
+                                一つのことにフォーカスする姿勢がかっこいいと思いました。
+                            </p>
+                    </div>
+                    );
+                }
+                else
+                if(this.state.phase === 1){
+                    return(
+                        <div className="message-wrapper" onClick={this.countClick}>
+                            <p>
+                                恐れ入りますが、弊社の経営理念は「衣食住の食を極める」ではないです。
+                                「食品ロスを減らすことで、経済的にも精神的にも豊かにする」ですよ。
+                                会社のホームページにも記載してあるのですが、ご覧になりましたか？
+                            </p>
+                    </div>
+                    );
+                }
+                else
+                if(this.state.phase === 2){
+                    return(
+                        <div className="message-wrapper" onClick={this.countClick}>
+                            <p>
+                                大変申し訳ありません、私が間違えておりました。
+                                食品ロスは先進国で深刻な問題でした。
+                                そのような課題に取り組むのが倫理的にも凄いと思いました。
+                            </p>
+                        </div>
+                    );
+                }
+                else
+                if(this.state.phase === 3){
+                    return(
+                        <div className="message-wrapper" onClick={this.props.forChange}>
+                            <p>
+                                その場で考えたような回答に聞こえるのですが、まあいいでしょう。
+                                今おっしゃったことを志望理由として私どもは受け取っておきます。
+                            </p>
+                        </div>
+                    );
+                    }
+                break;
+            
+            case 9:
+                if(this.state.phase === 0){
+                    return(
+                        <div className="message-wrapper"　onClick={this.countClick}>
+                            <p>
+                                マンホールの穴が丸い理由は蓋が穴に落ちないようにするためだと思います。
+                                四角形だと蓋が傾いたりした際に落ちると思うのですが、丸だと落ちません。
+                                安全性を考慮した上での丸だと思います。
+                            </p>
+                    </div>
+                    );
+                }
+                else
+                if(this.state.phase === 1){
+                    return(
+                        <div className="message-wrapper" onClick={this.countClick}>
+                            <p>
+                                今お答えになられたことがまさに正解です。
+                                理由も含めて不足のない完璧な説明でした。
+                                ちなみにこれは知っていたのですか？
+                            </p>
+                    </div>
+                    );
+                }
+                else
+                if(this.state.phase === 2){
+                    return(
+                        <div className="message-wrapper" onClick={this.countClick}>
+                            <p>
+                                いえ、知りませんでしたのでこの場で考えました。
+                                まず、マンホールの蓋の形としてどのようなものがあるのか考えました。
+                                丸と四角が思い浮かんだので、それの差異を考えることで結論を導きました。
+                            </p>
+                        </div>
+                    );
+                }
+                else
+                if(this.state.phase === 3){
+                    return(
+                        <div className="message-wrapper" onClick={this.props.forChange}>
+                            <p>
+                                素晴らしい思考力ですね。
+                                瞬時に客観的な視点で考察を行うことができるという力は、
+                                ビジネスの場においても十分活躍できると思います。
+                            </p>
+                        </div>
+                    );
+                    }
+                break;
+
+            case 10:
+                if(this.state.phase === 0){
+                    return(
+                        <div className="message-wrapper"　onClick={this.countClick}>
+                            <p>
+                                マンホールの穴が丸い理由は蓋が穴に落ちないようにするためだと思います。
+                                四角形だと蓋が傾いたりした際に落ちると思うのですが、丸だと落ちません。
+                                安全性を考慮した上での丸だと思います。
+                            </p>
+                    </div>
+                    );
+                }
+                else
+                if(this.state.phase === 1){
+                    return(
+                        <div className="message-wrapper" onClick={this.countClick}>
+                            <p>
+                                今お答えになられたことがまさに正解です。
+                                理由も含めて不足のない完璧な説明でした。
+                                ちなみにこれは知っていたのですか？
+                            </p>
+                    </div>
+                    );
+                }
+                else
+                if(this.state.phase === 2){
+                    return(
+                        <div className="message-wrapper" onClick={this.countClick}>
+                            <p>
+                                いえ、知りませんでしたのでこの場で考えました。
+                                まず、マンホールの蓋の形としてどのようなものがあるのか考えました。
+                                丸と四角が思い浮かんだので、それの差異を考えることで結論を導きました。
+                            </p>
+                        </div>
+                    );
+                }
+                else
+                if(this.state.phase === 3){
+                    return(
+                        <div className="message-wrapper" onClick={this.props.forChange}>
+                            <p>
+                                素晴らしい思考力ですね。
+                                瞬時に客観的な視点で考察を行うことができるという力は、
+                                ビジネスの場においても十分活躍できると思います。
+                            </p>
+                        </div>
+                    );
+                    }
+                break;
             case 11: return 11; break;
             case 12: return 12; break;
             case 13: return 13; break;
@@ -288,7 +577,7 @@ class AnswerLog extends React.Component{
     render(){
         const answerID = this.props.gameParams.answers.id[4*this.props.phase+this.props.chosenNumber];
         return(
-            <div>{this.makeAnswerLog()}</div>
+            <div>{this.makeAnswerLog(answerID)}</div>
         )
         
     }
