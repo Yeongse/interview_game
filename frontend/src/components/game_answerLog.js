@@ -511,9 +511,8 @@ class AnswerLog extends React.Component{
                     return(
                         <div className="message-wrapper"　onClick={this.countClick}>
                             <p>
-                                マンホールの穴が丸い理由は蓋が穴に落ちないようにするためだと思います。
-                                四角形だと蓋が傾いたりした際に落ちると思うのですが、丸だと落ちません。
-                                安全性を考慮した上での丸だと思います。
+                                マンホールの穴が丸い理由は、「穴は丸い」という一般的なイメージからだと思います。
+                                穴だと認識させることで一般人が危険に巻き込まれないように注意喚起していると思われます。
                             </p>
                     </div>
                     );
@@ -523,9 +522,8 @@ class AnswerLog extends React.Component{
                     return(
                         <div className="message-wrapper" onClick={this.countClick}>
                             <p>
-                                今お答えになられたことがまさに正解です。
-                                理由も含めて不足のない完璧な説明でした。
-                                ちなみにこれは知っていたのですか？
+                                なるほど、正解ではないですが悪くない答えですね。
+                                自身の知る常識と照らし合わせて理由を考えたのは良いですね。
                             </p>
                     </div>
                     );
@@ -535,9 +533,8 @@ class AnswerLog extends React.Component{
                     return(
                         <div className="message-wrapper" onClick={this.countClick}>
                             <p>
-                                いえ、知りませんでしたのでこの場で考えました。
-                                まず、マンホールの蓋の形としてどのようなものがあるのか考えました。
-                                丸と四角が思い浮かんだので、それの差異を考えることで結論を導きました。
+                                外したにもかかわらず、お褒めいただきありがとうございます。
+                                ちなみに正解を教えていただくことはできますでしょうか？
                             </p>
                         </div>
                     );
@@ -547,19 +544,255 @@ class AnswerLog extends React.Component{
                     return(
                         <div className="message-wrapper" onClick={this.props.forChange}>
                             <p>
-                                素晴らしい思考力ですね。
-                                瞬時に客観的な視点で考察を行うことができるという力は、
-                                ビジネスの場においても十分活躍できると思います。
+                                正解はあえて言わないでおくので、後で調べてください。
+                                調べる際に私のことを思い出してくれるといいかなと思っております。
                             </p>
                         </div>
                     );
                     }
                 break;
-            case 11: return 11; break;
-            case 12: return 12; break;
-            case 13: return 13; break;
-            case 14: return 14; break;
-            case 15: return 0; break;
+
+            case 11:
+                if(this.state.phase === 0){
+                    return(
+                        <div className="message-wrapper"　onClick={this.countClick}>
+                            <p>
+                                マンホールの穴が丸い理由は、蓋の製造コストが安いからだと思います。
+                                丸はいろんな図形の中で最も面積が小さくなると考えています。
+                                面積が小さいと値段も下がるので、これが理由と考えています。
+                            </p>
+                    </div>
+                    );
+                }
+                else
+                if(this.state.phase === 1){
+                    return(
+                        <div className="message-wrapper" onClick={this.countClick}>
+                            <p>
+                                理由もしっかりとした答えですが、残念ながら正解ではないです。
+                                マンホールの蓋はそんな大量に作るものではないので、コストは気にしないです。
+                                もっとマンホールの性質を考え直した方がいいと思います。
+                            </p>
+                    </div>
+                    );
+                }
+                else
+                if(this.state.phase === 2){
+                    return(
+                        <div className="message-wrapper" onClick={this.countClick}>
+                            <p>
+                                着眼点が全く的外れになってしまい、申し訳ありませんでした。
+                                とりあえず今日は面接が終わったら、すぐに正解を調べようと思います。
+                                自分の思考に足りない点を補強したいと考えています。
+                            </p>
+                        </div>
+                    );
+                }
+                else
+                if(this.state.phase === 3){
+                    return(
+                        <div className="message-wrapper" onClick={this.props.forChange}>
+                            <p>
+                                ここで正解をすぐに聞かず自分で調べようとするのは立派ですね。
+                                その習慣はこれからもぜひ持ち続けて欲しいものですね。
+                            </p>
+                        </div>
+                    );
+                    }
+                break;
+
+            case 12:
+                if(this.state.phase === 0){
+                    return(
+                        <div className="message-wrapper"　onClick={this.countClick}>
+                            <p>
+                                マンホールの穴が丸い理由は、雨水がたまらないようにするためだと思います。
+                                多角形だと頂点のところに固まってしまうところを、丸だと分散できます。
+                                過剰に貯まるのを避けて、安全性を確保するのが狙いだと思います。
+                            </p>
+                    </div>
+                    );
+                }
+                else
+                if(this.state.phase === 1){
+                    return(
+                        <div className="message-wrapper" onClick={this.countClick}>
+                            <p>
+                                マンホール＝雨を想像されたんですね。
+                                着眼点は悪くないですが、残念ながら正解ではないです。
+                            </p>
+                    </div>
+                    );
+                }
+                else
+                if(this.state.phase === 2){
+                    return(
+                        <div className="message-wrapper" onClick={this.countClick}>
+                            <p>
+                                物事に対する着眼点は昔からいいと自負しておりますので、本日はそれを発揮できてよかったです。
+                                今度聞かれた時は正解を導けるように頑張りたいと思います。
+                            </p>
+                        </div>
+                    );
+                }
+                else
+                if(this.state.phase === 3){
+                    return(
+                        <div className="message-wrapper" onClick={this.props.forChange}>
+                            <p>
+                                向上心は素晴らしいですね。
+                                これからも引き続き頑張っていただきたいですね。
+                            </p>
+                        </div>
+                    );
+                    }
+                break;
+
+            case 13:
+                if(this.state.phase === 0){
+                    return(
+                        <div className="message-wrapper"　onClick={this.countClick}>
+                            <p>
+                                お願いです、なんでもしますからこのペンを買ってください。
+                                今このペンが売れないと母の手術代が無いんです。
+                                お願いします、本当にお願いします。
+                            </p>
+                    </div>
+                    );
+                }
+                else
+                if(this.state.phase === 1){
+                    return(
+                        <div className="message-wrapper" onClick={this.countClick}>
+                            <p>
+                                泣き落としですか、今の時代珍しいですね。
+                                母の手術代は残念ですが、泣き落としでは私は買いませんよ。
+                            </p>
+                    </div>
+                    );
+                }
+                else
+                if(this.state.phase === 2){
+                    return(
+                        <div className="message-wrapper" onClick={this.countClick}>
+                            <p>
+                                靴も舐めますし、土下座もします。
+                                お子さんの送り迎えも、奥さんへのマッサージもします。
+                                本当になんでもするので、このペンだけ買ってください。
+                            </p>
+                        </div>
+                    );
+                }
+                else
+                if(this.state.phase === 3){
+                    return(
+                        <div className="message-wrapper" onClick={this.props.forChange}>
+                            <p>
+                                最初から最後まで徹底して泣き落としするんですね。
+                                泣き落としは必ずいいとは言えませんが、貫く姿勢は評価に値します。
+                                手強い質問でしたが、ご回答ありがとうございました。
+                            </p>
+                        </div>
+                    );
+                    }
+                break;
+
+            case 14:
+                if(this.state.phase === 0){
+                    return(
+                        <div className="message-wrapper"　onClick={this.countClick}>
+                            <p>
+                                これからこのペンの長所をお伝えします。
+                                このペンはインクが長時間持ち、2年は買い替える必要はないです。
+                                また、ペン先の走り心地がよくどんな紙にでもすらすらと書けます。
+                            </p>
+                    </div>
+                    );
+                }
+                else
+                if(this.state.phase === 1){
+                    return(
+                        <div className="message-wrapper" onClick={this.countClick}>
+                            <p>
+                                そのペンにはそんな長所があったんですね。
+                                紙面問わず書きやすいのは魅力に思います。
+                                インクは使う頻度によっても減り方が変わるので、2年持つと断言は難しいのではないでしょうか？
+                            </p>
+                    </div>
+                    );
+                }
+                else
+                if(this.state.phase === 2){
+                    return(
+                        <div className="message-wrapper" onClick={this.countClick}>
+                            <p>
+                                そうですね、確かに断言はできないですね。
+                                一般的なペンに比べて3倍長く持つという表現に変えましょう。
+                                これでいかがでしょうか？
+                            </p>
+                        </div>
+                    );
+                }
+                else
+                if(this.state.phase === 3){
+                    return(
+                        <div className="message-wrapper" onClick={this.props.forChange}>
+                            <p>
+                                そちらの方がわかりやすくていいです。
+                                長所をわかりやすく語られると、購買意欲がそそられますね。
+                                いい売り込みをありがとうございます。
+                            </p>
+                        </div>
+                    );
+                    }
+                break;
+
+            case 15:
+                if(this.state.phase === 0){
+                    return(
+                        <div className="message-wrapper"　onClick={this.countClick}>
+                            <p>
+                                マンホールの穴が丸い理由は、雨水がたまらないようにするためだと思います。
+                                多角形だと頂点のところに固まってしまうところを、丸だと分散できます。
+                                過剰に貯まるのを避けて、安全性を確保するのが狙いだと思います。
+                            </p>
+                    </div>
+                    );
+                }
+                else
+                if(this.state.phase === 1){
+                    return(
+                        <div className="message-wrapper" onClick={this.countClick}>
+                            <p>
+                                マンホール＝雨を想像されたんですね。
+                                着眼点は悪くないですが、残念ながら正解ではないです。
+                            </p>
+                    </div>
+                    );
+                }
+                else
+                if(this.state.phase === 2){
+                    return(
+                        <div className="message-wrapper" onClick={this.countClick}>
+                            <p>
+                                物事に対する着眼点は昔からいいと自負しておりますので、本日はそれを発揮できてよかったです。
+                                今度聞かれた時は正解を導けるように頑張りたいと思います。
+                            </p>
+                        </div>
+                    );
+                }
+                else
+                if(this.state.phase === 3){
+                    return(
+                        <div className="message-wrapper" onClick={this.props.forChange}>
+                            <p>
+                                向上心は素晴らしいですね。
+                                これからも引き続き頑張っていただきたいですね。
+                            </p>
+                        </div>
+                    );
+                    }
+                break;
             case 16: return 0; break;
             case 17: return 0; break;
             case 18: return 0; break;
