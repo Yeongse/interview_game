@@ -752,9 +752,9 @@ class AnswerLog extends React.Component{
                     return(
                         <div className="message-wrapper"　onClick={this.countClick}>
                             <p>
-                                マンホールの穴が丸い理由は、雨水がたまらないようにするためだと思います。
-                                多角形だと頂点のところに固まってしまうところを、丸だと分散できます。
-                                過剰に貯まるのを避けて、安全性を確保するのが狙いだと思います。
+                                このペンを買いたいという気持ちはどこから来るか知っていますか？
+                                それはすなわち心です。これから私はあなたの心に語りかけます。
+                                私の強い思いは必ずあなたに届くと信じています。
                             </p>
                     </div>
                     );
@@ -764,8 +764,9 @@ class AnswerLog extends React.Component{
                     return(
                         <div className="message-wrapper" onClick={this.countClick}>
                             <p>
-                                マンホール＝雨を想像されたんですね。
-                                着眼点は悪くないですが、残念ながら正解ではないです。
+                                何がしたいのかよくわかりませんが、珍しいアプローチですね。
+                                多分買うことはないと思いますが話だけは聞きましょう。
+                                それではお話を続けてくだいさい。
                             </p>
                     </div>
                     );
@@ -775,8 +776,9 @@ class AnswerLog extends React.Component{
                     return(
                         <div className="message-wrapper" onClick={this.countClick}>
                             <p>
-                                物事に対する着眼点は昔からいいと自負しておりますので、本日はそれを発揮できてよかったです。
-                                今度聞かれた時は正解を導けるように頑張りたいと思います。
+                                売り込みに注いでいる私の情熱を見てください。
+                                もう他のことはなんでもいいかのように販売に集中していますよね。
+                                こんなに頑張っている人を応援したくはありませんか？
                             </p>
                         </div>
                     );
@@ -786,26 +788,449 @@ class AnswerLog extends React.Component{
                     return(
                         <div className="message-wrapper" onClick={this.props.forChange}>
                             <p>
-                                向上心は素晴らしいですね。
-                                これからも引き続き頑張っていただきたいですね。
+                                精神論的なもので訴えようとしていたのですね、やっと理解しました。
+                                ただ、私には人間の感情というものがないので通用しませんよ。
+                                回答は以上で大丈夫です、ありがとうございました。
                             </p>
                         </div>
                     );
                     }
                 break;
-            case 16: return 0; break;
-            case 17: return 0; break;
-            case 18: return 0; break;
-            case 19: return 0; break;
-            case 20: return 0; break;
-            case 21: return 0; break;
-            case 22: return 0; break;
-            case 23: return 0; break;
-            case 24: return 4; break;
+
+            case 16:
+                if(this.state.phase === 0){
+                    return(
+                        <div className="message-wrapper"　onClick={this.countClick}>
+                            <p>
+                                今からこのペンを販売するにあたって、あなたに質問をします。
+                                このペンを買わないという選択を取るならば、その理由を説明してください。
+                            </p>
+                    </div>
+                    );
+                }
+                else
+                if(this.state.phase === 1){
+                    return(
+                        <div className="message-wrapper" onClick={this.countClick}>
+                            <p>
+                                そう来ましたか、いいですね。
+                                単純に今ペンを持っていて余分なものがいらないので買わないです。
+                            </p>
+                    </div>
+                    );
+                }
+                else
+                if(this.state.phase === 2){
+                    return(
+                        <div className="message-wrapper" onClick={this.countClick}>
+                            <p>
+                                
+                            </p>
+                        </div>
+                    );
+                }
+                else
+                if(this.state.phase === 3){
+                    return(
+                        <div className="message-wrapper" onClick={this.props.forChange}>
+                            <p>
+                                精神論的なもので訴えようとしていたのですね、やっと理解しました。
+                                ただ、私には人間の感情というものがないので通用しませんよ。
+                                回答は以上で大丈夫です、ありがとうございました。
+                            </p>
+                        </div>
+                    );
+                    }
+                break;
+
+            case 17:
+                if(this.state.phase === 0){
+                    return(
+                        <div className="message-wrapper"　onClick={this.countClick}>
+                            <p>
+                                私は今100万円をもらったら必ず貯金します。
+                                こんな大金を常に持っていれば、将来の不測の事態に対応できると思います。
+                                コロナ禍では貯金の需要がより一層高まっていると考えています。
+                            </p>
+                    </div>
+                    );
+                }
+                else
+                if(this.state.phase === 1){
+                    return(
+                        <div className="message-wrapper" onClick={this.countClick}>
+                            <p>
+                                不安定な未来への保険として貯金するのですね。
+                                ちなみに100万円は大金ではなく、生活に十分な金額ではないと思いますよ。
+                                本当に100万円だけで様々な問題に対応できると考えているのですか？
+                            </p>
+                    </div>
+                    );
+                }
+                else
+                if(this.state.phase === 2){
+                    return(
+                        <div className="message-wrapper" onClick={this.countClick}>
+                            <p>
+                                これだけで十分な金額だとは私も思っていません。
+                                あくまでも緊急時の足しとして貯金をするだけです。
+                            </p>
+                        </div>
+                    );
+                }
+                else
+                if(this.state.phase === 3){
+                    return(
+                        <div className="message-wrapper" onClick={this.props.forChange}>
+                            <p>
+                                そこが理解できているのなら大きな問題はありませんね。
+                                このような場合だと貯金は悪くはない使い方ですね。
+                            </p>
+                        </div>
+                    );
+                    }
+                break;
+                
+            case 18:
+                if(this.state.phase === 0){
+                    return(
+                        <div className="message-wrapper"　onClick={this.countClick}>
+                            <p>
+                                私は100万円を活用して自分磨きの勉強を行いたいと考えています。
+                                お金は投資することでその価値を何倍にも増やすことができます。
+                                自分の能力に投資をすることで価値の最大化を目指します。
+                            </p>
+                    </div>
+                    );
+                }
+                else
+                if(this.state.phase === 1){
+                    return(
+                        <div className="message-wrapper" onClick={this.countClick}>
+                            <p>
+                                お金をもらうとまず自己投資を思いつくとは素晴らしいですね。
+                                ちなみに過去にはどのような事をどれくらい勉強したんですか？
+                            </p>
+                    </div>
+                    );
+                }
+                else
+                if(this.state.phase === 2){
+                    return(
+                        <div className="message-wrapper" onClick={this.countClick}>
+                            <p>
+                                はい、過去には筋トレやプログラミングの勉強を独学でしていました。
+                                どちらも1ヶ月ほどしっかりと続けました。
+                            </p>
+                        </div>
+                    );
+                }
+                else
+                if(this.state.phase === 3){
+                    return(
+                        <div className="message-wrapper" onClick={this.props.forChange}>
+                            <p>
+                                1ヶ月とはとても短くて決して身についたとは言えませんね。
+                                今の話を聞くと、本当にお金で自己研鑽をするのか疑わしくなってきました。
+                                この質問に関してはこのくらいで十分です、ありがとうございました。
+                            </p>
+                        </div>
+                    );
+                    }
+                break;
+
+            case 19:
+                if(this.state.phase === 0){
+                    return(
+                        <div className="message-wrapper"　onClick={this.countClick}>
+                            <p>
+                                私は100万円があると豪遊して最高に楽しい時間を過ごします。
+                                そしてこの時間を今後の人生で頑張る糧にしたいと思います。
+                            </p>
+                    </div>
+                    );
+                }
+                else
+                if(this.state.phase === 1){
+                    return(
+                        <div className="message-wrapper" onClick={this.countClick}>
+                            <p>
+                                あなたのその正直なところは非常に評価に値します。
+                                豪遊したいとのことですが、具体的にどのようなことをされたいのですか？
+                            </p>
+                    </div>
+                    );
+                }
+                else
+                if(this.state.phase === 2){
+                    return(
+                        <div className="message-wrapper" onClick={this.countClick}>
+                            <p>
+                                嘘をつかない事を心情に生きて来たので、そこを褒めていただいて嬉しいです。
+                                お金で高いお酒と女を買いたいと思っています。
+                                社長達がよくやるような遊びをしたいです。
+                            </p>
+                        </div>
+                    );
+                }
+                else
+                if(this.state.phase === 3){
+                    return(
+                        <div className="message-wrapper" onClick={this.props.forChange}>
+                            <p>
+                                確かにそのようなことをするには100万円は丁度いいですね。
+                                あなたの考えは声を大にして賞賛できるものではありませんが、理にかなっていますね。
+                                個人的には結構好きなアイデアでしたよ。
+                            </p>
+                        </div>
+                    );
+                    }
+                break;
+
+            case 20:
+                if(this.state.phase === 0){
+                    return(
+                        <div className="message-wrapper"　onClick={this.countClick}>
+                            <p>
+                                もしも私が100万円を持つと、すぐに競馬に全額を注ぎ込みます。
+                                リスクを冒してでもやはり大金を稼ぎたいと思います。
+                                私はお金はさらなるお金を儲けるための道具と考えているので、迷わず投資します。
+                            </p>
+                    </div>
+                    );
+                }
+                else
+                if(this.state.phase === 1){
+                    return(
+                        <div className="message-wrapper" onClick={this.countClick}>
+                            <p>
+                                競馬がいいかどうかは置いておいて、投資に関する姿勢はいいですね。
+                                お金はさらなるお金を儲ける道具というのはまさにその通りだと私も思いますよ。
+                                一応お聞きしますが、100万円をすっても大丈夫なんですか？
+                            </p>
+                    </div>
+                    );
+                }
+                else
+                if(this.state.phase === 2){
+                    return(
+                        <div className="message-wrapper" onClick={this.countClick}>
+                            <p>
+                                仮に0円になったとしても、私は全然気にしないです。
+                                単純に競馬をしているのは楽しいのもあるのでね。
+                            </p>
+                        </div>
+                    );
+                }
+                else
+                if(this.state.phase === 3){
+                    return(
+                        <div className="message-wrapper" onClick={this.props.forChange}>
+                            <p>
+                                あなたにとって楽しみながらお金を稼げる手段が競馬というわけですね。
+                                その判断基準は私も良いと思いますのでこれからも続けてください。
+                            </p>
+                        </div>
+                    );
+                    }
+                break;
+
+            case 21:
+                if(this.state.phase === 0){
+                    return(
+                        <div className="message-wrapper"　onClick={this.countClick}>
+                            <p>
+                                私が好きな四字熟語は「酒池肉林」です。
+                                私は飲んだり食べたりワイワイするのが大好きでいつも幹事をやります。
+                                そんな私にぴったりな言葉だと思い、好きになりました。
+                            </p>
+                    </div>
+                    );
+                }
+                else
+                if(this.state.phase === 1){
+                    return(
+                        <div className="message-wrapper" onClick={this.countClick}>
+                            <p>
+                                確かにあなたは飲み会で話を回せるタイプの人に見えますね。
+                                今はコロナ禍で全然そのような会を催せないのは辛いですよね。
+                            </p>
+                    </div>
+                    );
+                }
+                else
+                if(this.state.phase === 2){
+                    return(
+                        <div className="message-wrapper" onClick={this.countClick}>
+                            <p>
+                                それは本当にそうです。
+                                リモート飲み会なども一時期流行りましたが、私は楽しめませんでした。
+                                コロナが落ち着き御社に入社したら、盛り上げ役として大活躍したいです。
+                            </p>
+                        </div>
+                    );
+                }
+                else
+                if(this.state.phase === 3){
+                    return(
+                        <div className="message-wrapper" onClick={this.props.forChange}>
+                            <p>
+                                うちの役員連中はそういう人は大歓迎です。
+                                仕事ができるかよりもそっちの方を大事にしているくらいです。
+                                あなたの入社を楽しみにしています。
+                            </p>
+                        </div>
+                    );
+                    }
+                break;
+
+            case 22:
+                if(this.state.phase === 0){
+                    return(
+                        <div className="message-wrapper"　onClick={this.countClick}>
+                            <p>
+                                私が好きな四字熟語は「一生懸命」です。
+                                ひたむきに頑張る人間の姿というものはいつも美しいものだと思います。
+                                この四字熟語は努力を描写した良い表現だと思います。
+                            </p>
+                    </div>
+                    );
+                }
+                else
+                if(this.state.phase === 1){
+                    return(
+                        <div className="message-wrapper" onClick={this.countClick}>
+                            <p>
+                                あなた自身が頑張ったことがなさそうなので、あまり共感できない単語だと思ったのですが。
+                                あと、急に文学者っぽく語られたので少し困惑しました。
+                            </p>
+                    </div>
+                    );
+                }
+                else
+                if(this.state.phase === 2){
+                    return(
+                        <div className="message-wrapper" onClick={this.countClick}>
+                            <p>
+                                私はバイトや勉強などを頑張っていましたよ？
+                                一方で少し調子に乗った言い方をしたのは申し訳ありませんでした。
+                            </p>
+                        </div>
+                    );
+                }
+                else
+                if(this.state.phase === 3){
+                    return(
+                        <div className="message-wrapper" onClick={this.props.forChange}>
+                            <p>
+                                それは知っていますが、どれも続いておらず目立った結果につながっていないですよね。
+                                この回答は適当に思いついた薄っぺらいものだと考えておきます。
+                            </p>
+                        </div>
+                    );
+                    }
+                break;
+
+            case 23:
+                if(this.state.phase === 0){
+                    return(
+                        <div className="message-wrapper"　onClick={this.countClick}>
+                            <p>
+                                私が好きな四字熟語は「泰然自若」です。
+                                男という生き物はどっしりと構えているのがかっこいいと思っています。
+                                何事にも動じず、常に落ち着いた大人になりたいと考えています。
+                            </p>
+                    </div>
+                    );
+                }
+                else
+                if(this.state.phase === 1){
+                    return(
+                        <div className="message-wrapper" onClick={this.countClick}>
+                            <p>
+                                良い言葉ですが、適度な緊張や感受性も持った方がいいと私は思いますよ。
+                                そういう人の方が人当たりが良く、可愛がられます。
+                                この要素はあなたが思うよりも社会人で大事なポイントですよ。
+                            </p>
+                    </div>
+                    );
+                }
+                else
+                if(this.state.phase === 2){
+                    return(
+                        <div className="message-wrapper" onClick={this.countClick}>
+                            <p>
+                                大変勉強になります、ありがとうございます。
+                                一つの方が必ずしも正しいと思わないようにします。
+                                臨機応変に、時と場合に応じて柔軟に考え方を変えようと思います。
+                            </p>
+                        </div>
+                    );
+                }
+                else
+                if(this.state.phase === 3){
+                    return(
+                        <div className="message-wrapper" onClick={this.props.forChange}>
+                            <p>
+                                私もそれがいいと思います。
+                                ついでに好きな四字熟語も「臨機応変」とかに変えておくといいと思いますよ。
+                            </p>
+                        </div>
+                    );
+                    }
+                break;
+
+            case 24:
+                if(this.state.phase === 0){
+                    return(
+                        <div className="message-wrapper"　onClick={this.countClick}>
+                            <p>
+                                私が好きな四字熟語は「以心伝心」です。
+                                お互いの心を通わせることができるというのは素晴らしいと思います。
+                                私にもそのような友人がいたのですが、ある事件をきっかけに縁が切れました。
+                            </p>
+                    </div>
+                    );
+                }
+                else
+                if(this.state.phase === 1){
+                    return(
+                        <div className="message-wrapper" onClick={this.countClick}>
+                            <p>
+                                以心伝心はいい言葉ですね、私も好きな四字熟語です。
+                                ちなみにある事件というのを簡単に教えてくれますか？
+                            </p>
+                    </div>
+                    );
+                }
+                else
+                if(this.state.phase === 2){
+                    return(
+                        <div className="message-wrapper" onClick={this.countClick}>
+                            <p>
+                                一言で言うと、私がその子のお母さんとデキてしまったんです。
+                                当時シングルマザーで美人だったので、熟女好きの私にはたまりませんでした。
+                                後日この事実を知った友人は激昂し、縁が切れました。
+                            </p>
+                        </div>
+                    );
+                }
+                else
+                if(this.state.phase === 3){
+                    return(
+                        <div className="message-wrapper" onClick={this.props.forChange}>
+                            <p>
+                                それは100%あなたが悪いですね、反省してください。
+                                でも熟女付きは悪くないと思います。
+                                お金持ちのおばあちゃん達を相手にできるなら、弊社にもポジションがあるかもしれません。
+                            </p>
+                        </div>
+                    );
+                    }
+                break;
         }
     }
     
-
 
     render(){
         const answerID = this.props.gameParams.answers.id[4*this.props.phase+this.props.chosenNumber];

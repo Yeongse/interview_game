@@ -1,6 +1,6 @@
 import React from "react";
 
-//props:勝ったかどうか(boolian)
+
 class FinishLog extends React.Component{
     render(){
         return(
