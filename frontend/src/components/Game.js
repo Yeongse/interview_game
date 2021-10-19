@@ -14,7 +14,7 @@ class Game extends React.Component{
         super(props);
         this.state = {totalPhase:0, gameParams:{}};;
         this.addTotalPhase  = this.addTotalPhase.bind(this);
-        this.finishGame = this.finishGame.bind(this);
+        this.finishGame     = this.finishGame.bind(this);
         this.componentController = this.componentController.bind(this);
     }
 
@@ -52,11 +52,11 @@ class Game extends React.Component{
             switch(this.state.totalPhase){
                 case 0:   return <FirstMessage　character={CHARACTER} company={COMPANY} forChange={this.addTotalPhase}/>;
                           break;
-                case 1:   return <Interview interviewPhase={this.state.totalPhase-1} gameParams={this.state.gameParams} forChange={this.addTotalPhase}/>;
+                case 1:   return <Interview interviewPhase={this.state.totalPhase-1} gameParams={this.state.gameParams} forChange0={this.addTotalPhase} forChange1={this.finishGame}/>;
                           break;
-                case 2:   return <Interview interviewPhase={this.state.totalPhase-1} gameParams={this.state.gameParams} forChange={this.addTotalPhase}/>;
+                case 2:   return <Interview interviewPhase={this.state.totalPhase-1} gameParams={this.state.gameParams} forChange0={this.addTotalPhase} forChange1={this.finishGame}/>;
                           break;
-                case 3:   return <Interview interviewPhase={this.state.totalPhase-1} gameParams={this.state.gameParams} forChange={this.addTotalPhase}/>;
+                case 3:   return <Interview interviewPhase={this.state.totalPhase-1} gameParams={this.state.gameParams} forChange0={this.addTotalPhase} forChange1={this.finishGame}/>;
                           break;
                 case 100: return <FinalMessage />;
                           break;

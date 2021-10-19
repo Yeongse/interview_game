@@ -1233,11 +1233,9 @@ class AnswerLog extends React.Component{
     
 
     render(){
-        const answerID = this.props.gameParams.answers.id[4*this.props.phase+this.props.chosenNumber];
         return(
-            <div>{this.makeAnswerLog(answerID)}</div>
+            <div>{this.makeAnswerLog(this.props.answerID)}</div>
         )
-        
     }
 }
 
