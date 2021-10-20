@@ -2,11 +2,13 @@ import React from "react";
 import axios from "axios";
 import { Link } from 'react-router-dom'
 
-import Image        from "./game_image";
-import Frame        from "./frame";
-import FirstMessage from "./game_firstMessage";
-import Interview    from "./game_interview"
-import FinalMessage from "./game_finalMessage";
+import Image          from "./game_image";
+import Frame          from "./frame";
+import FirstMessage   from "./game_firstMessage";
+import Interview      from "./game_interview"
+import SuccessMessage from "./game_successMessage";
+import FailMessage    from "./game_failMessage";
+
 
 
 class Game extends React.Component{
@@ -52,13 +54,15 @@ class Game extends React.Component{
             switch(this.state.totalPhase){
                 case 0:   return <FirstMessage　character={CHARACTER} company={COMPANY} forChange={this.addTotalPhase}/>;
                           break;
-                case 1:   return <Interview interviewPhase={this.state.totalPhase-1} gameParams={this.state.gameParams} forChange0={this.addTotalPhase} forChange1={this.finishGame}/>;
+                case 1:   return <Interview interviewPhase={this.state.totalPhase-1} gameParams={this.state.gameParams} forChangeTrue={this.finishGame} forChangeFalse={this.addTotalPhase}/>;
                           break;
-                case 2:   return <Interview interviewPhase={this.state.totalPhase-1} gameParams={this.state.gameParams} forChange0={this.addTotalPhase} forChange1={this.finishGame}/>;
+                case 2:   return <Interview interviewPhase={this.state.totalPhase-1} gameParams={this.state.gameParams} forChangeTrue={this.finishGame} forChangeFalse={this.addTotalPhase}/>;
                           break;
-                case 3:   return <Interview interviewPhase={this.state.totalPhase-1} gameParams={this.state.gameParams} forChange0={this.addTotalPhase} forChange1={this.finishGame}/>;
+                case 3:   return <Interview interviewPhase={this.state.totalPhase-1} gameParams={this.state.gameParams} forChangeTrue={this.finishGame} forChangeFalse={this.addTotalPhase}/>;
                           break;
-                case 100: return <FinalMessage />;
+                case 4:   return <SuccessMessage />;
+                          break;
+                case 100: return <FailMessage />;
                           break;
             }    
         }
@@ -66,6 +70,7 @@ class Game extends React.Component{
     
 
     render(){
+        console.log(this.state.totalPhase);
         return(
             <div>
                 <Frame />
