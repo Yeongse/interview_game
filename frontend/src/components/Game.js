@@ -76,7 +76,7 @@ class Game extends React.Component{
         return(
             <div>
                 <Frame />
-                <Image />
+                <Image phase={this.state.totalPhase}/>
                 <div className="variable">
                     {this.componentController()}
                 </div>

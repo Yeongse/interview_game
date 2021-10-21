@@ -12,7 +12,7 @@ class FirstMessage extends React.Component{
         this.setState({"phase":this.state.phase+1});
     }
 
-
+    
     render(){
         if(this.state.phase === 0){
             return(
@@ -30,7 +30,7 @@ class FirstMessage extends React.Component{
             return(
                 <div className="message-wrapper" onClick={this.countClick}>
                     <p>
-                        名前：{this.props.character.name}、学歴：{this.props.character.background}、スキル：{this.props.character.experience}、
+                        名前：{this.props.character.name}、学歴：{this.props.character.background}、スキル：{this.props.character.skill}、
                         人物像:{this.props.character.personality}
                     </p>
             </div>

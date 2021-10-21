@@ -824,7 +824,9 @@ class AnswerLog extends React.Component{
                     return(
                         <div className="message-wrapper" onClick={this.countClick}>
                             <p>
-                                
+                                でも十分な数を持っているとは言えないですよね？
+                                急にペンが折れる場合やインクが乾いて使い物にならなくなる場合もあります。
+                                そういった状況に備えて、一本、このペンを用意しておくといいと思います。
                             </p>
                         </div>
                     );
@@ -834,9 +836,9 @@ class AnswerLog extends React.Component{
                     return(
                         <div className="message-wrapper" onClick={this.props.forChange}>
                             <p>
-                                精神論的なもので訴えようとしていたのですね、やっと理解しました。
-                                ただ、私には人間の感情というものがないので通用しませんよ。
-                                回答は以上で大丈夫です、ありがとうございました。
+                                言われてみればそうですね。普段は何かあれば周囲の人に頼んでいました。
+                                自分で余分に持っていればその問題が解決できるのはいいですね。
+                                回答ありがとうございました。
                             </p>
                         </div>
                     );
