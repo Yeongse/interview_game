@@ -1,6 +1,6 @@
 import React from "react";
 
-//props:character
+//props:character, company, forChange
 class FirstMessage extends React.Component{
     constructor(props){
         super(props);

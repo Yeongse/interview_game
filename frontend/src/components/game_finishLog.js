@@ -1,11 +1,11 @@
 import React from "react";
 
-
+//props:isLose, forChange
 class FinishLog extends React.Component{
+
     constructor(props){
         super(props);
     }
-
     
     render(){
         switch(this.props.isLose){

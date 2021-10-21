@@ -6,6 +6,7 @@ import Image          from "./game_image";
 import Frame          from "./frame";
 import FirstMessage   from "./game_firstMessage";
 import Interview      from "./game_interview"
+import Interval       from "./game_interval.js"
 import SuccessMessage from "./game_successMessage";
 import FailMessage    from "./game_failMessage";
 
@@ -31,7 +32,6 @@ class Game extends React.Component{
         this.setState({totalPhase:this.state.totalPhase+1});
     }
 
-
     finishGame(){
         this.setState({totalPhase:100})
     }
@@ -56,11 +56,13 @@ class Game extends React.Component{
                           break;
                 case 1:   return <Interview interviewPhase={this.state.totalPhase-1} gameParams={this.state.gameParams} forChangeTrue={this.finishGame} forChangeFalse={this.addTotalPhase}/>;
                           break;
-                case 2:   return <Interview interviewPhase={this.state.totalPhase-1} gameParams={this.state.gameParams} forChangeTrue={this.finishGame} forChangeFalse={this.addTotalPhase}/>;
+                case 2:   return <Interval forChange={this.addTotalPhase}/>
+                case 3:   return <Interview interviewPhase={this.state.totalPhase-2} gameParams={this.state.gameParams} forChangeTrue={this.finishGame} forChangeFalse={this.addTotalPhase}/>;
                           break;
-                case 3:   return <Interview interviewPhase={this.state.totalPhase-1} gameParams={this.state.gameParams} forChangeTrue={this.finishGame} forChangeFalse={this.addTotalPhase}/>;
+                case 4:   return <Interval forChange={this.addTotalPhase}/>
+                case 5:   return <Interview interviewPhase={this.state.totalPhase-3} gameParams={this.state.gameParams} forChangeTrue={this.finishGame} forChangeFalse={this.addTotalPhase}/>;
                           break;
-                case 4:   return <SuccessMessage />;
+                case 6:   return <SuccessMessage />;
                           break;
                 case 100: return <FailMessage />;
                           break;

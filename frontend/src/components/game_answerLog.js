@@ -1,6 +1,6 @@
 import React from "react";
 
-//props:answer.text
+//props:answerID, gameParams, forChange
 class AnswerLog extends React.Component{
     constructor(props){
         super(props);
@@ -1221,7 +1221,7 @@ class AnswerLog extends React.Component{
                         <div className="message-wrapper" onClick={this.props.forChange}>
                             <p>
                                 それは100%あなたが悪いですね、反省してください。
-                                でも熟女付きは悪くないと思います。
+                                でも熟女好きは悪くないと思います。
                                 お金持ちのおばあちゃん達を相手にできるなら、弊社にもポジションがあるかもしれません。
                             </p>
                         </div>

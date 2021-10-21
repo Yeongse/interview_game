@@ -1,6 +1,6 @@
 import React from "react";
 
-//props:character.name, member.name
+//props:phase, character, company, member
 class StartLog extends React.Component{
     constructor(props){
         super(props);

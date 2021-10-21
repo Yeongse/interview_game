@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 
-//props:なし
+
 class FeedbackForm extends React.Component{
     constructor(props){
         super(props);

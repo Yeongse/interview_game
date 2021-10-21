@@ -1,6 +1,6 @@
 import React from "react";
 
-//props:character.props,answer.propsによって計算される相性
+//props:damage, forChange
 class DamageLog extends React.Component{
     constructor(props){
         super(props);

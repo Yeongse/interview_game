@@ -1,7 +1,6 @@
 import React from "react";
 import axios from "axios";
 
-//props:なし
 class FeedbackList extends React.Component{
     constructor(props){
         super(props);
