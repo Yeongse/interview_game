@@ -1,3 +1,4 @@
+import "./components.css"
 import React from "react";
 
 //props:phase, character, company, member
@@ -16,9 +17,11 @@ class StartLog extends React.Component{
         if(this.state.phase === 0){
             return(
                 <div className="message-wrapper"　onClick={this.countClick}>
-                    <p className="thirdPerson">
-                        ({this.props.phase+1}回目の面接です。)
-                    </p>
+                    <div className="independent">
+                        <p className="thirdPerson">
+                            ({this.props.phase+1}回目の面接です。)
+                        </p>
+                    </div>
             </div>
             );
         }
@@ -27,8 +30,8 @@ class StartLog extends React.Component{
             return(
                 <div className="message-wrapper" onClick={this.countClick}>
                     <p className="firstPerson">
-                        初めまして。{this.props.character.background}の{this.props.character.name}と申します。
-                        本日は面接よろしくお願いします。
+                        <p>初めまして。{this.props.character.background}の{this.props.character.name}と申します。</p>
+                        <p>本日は面接よろしくお願いします。</p>
                     </p>
             </div>
             );
@@ -38,8 +41,8 @@ class StartLog extends React.Component{
             return(
                 <div className="message-wrapper" onClick={this.countClick}>
                     <p className="secondPerson">
-                        初めまして。{this.props.company.name}、{this.props.member.position}の{this.props.member.name}です。
-                        こちらこそ本日はよろしくお願いします。
+                        <p>初めまして。{this.props.company.name}、{this.props.member.position}の{this.props.member.name}です。</p>
+                        <p>こちらこそ本日はよろしくお願いします。</p>
                     </p>
                 </div>
             );
@@ -49,8 +52,9 @@ class StartLog extends React.Component{
             return(
                 <div className="message-wrapper" onClick={this.countClick}>
                     <p className="thirdPerson">
-                        名前：{this.props.member.name}、役職：{this.props.member.position}、
-                        人物像:{this.props.member.personality}
+                        <p>名前：{this.props.member.name}</p>
+                        <p>役職：{this.props.member.position}</p>
+                        <p>人物像:{this.props.member.personality}</p>
                     </p>
                 </div>
             );

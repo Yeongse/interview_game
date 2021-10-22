@@ -1,3 +1,4 @@
+import "./components.css"
 import React from "react";
 
 //props:damage, forChange
@@ -8,10 +9,12 @@ class DamageLog extends React.Component{
 
     render(){
         return(
-            <div onClick={this.props.forChange}>
-                <p className="thirdPerson">
-                    {this.props.damage}のダメージ
-                </p>
+            <div className="message-wrapper damage" onClick={this.props.forChange}>
+                <div className="independent">
+                    <p className="thirdPerson">
+                        {this.props.damage}のダメージ
+                    </p>
+                </div>
             </div>
         )
     }

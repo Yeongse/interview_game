@@ -1,11 +1,13 @@
+import "./components.css"
 import React from "react";
 
 //props:なし
 class Frame extends React.Component{
     render(){
         return(
-            <div>
-                <h1>Frameです</h1>
+            <div className="frame">
+                <h1>面接ゲーム</h1>
+                <p>下の四角いところをクリックするとゲームが進むよ</p>
             </div>
         )
     }

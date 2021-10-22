@@ -1,3 +1,4 @@
+import "./components.css"
 import React from "react";
 import axios from "axios";
 
@@ -17,7 +18,7 @@ class FeedbackList extends React.Component{
     render(){
         return(
             <div className="list-wrapper">
-                <header className="listHeader">
+                <header className="list-header">
                     <h2>過去のフィードバック</h2>
                 </header>
                 <div>

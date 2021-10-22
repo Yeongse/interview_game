@@ -1,0 +1,143 @@
+.feedback-wrapper{
+  width: 800px;
+  background: #fff;
+  border:solid thin  black;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.list-wrapper{
+  border:solid thin  black;
+}
+
+.form-wrapper{
+  border:solid thin  black;
+}
+
+.list-header{
+  padding:400px,50px;
+  background-color: cadetblue;
+  text-align:center;
+}
+
+.form-header{
+  margin:10px,50px;
+  border:solid thin  black;
+  text-align:center;
+}
+
+
+.message-wrapper{
+  margin: 5px;
+  border:solid thin  black;
+  border-radius: 5px;
+  width:800px;
+  height:140px;
+  white-space: pre-wrap;
+  background-color:wheat;
+}
+
+.message-wrapper p{
+  margin: 3px;
+}
+
+.firstPerson{
+  color:darkblue;
+}
+
+.secondPerson{
+  color:darkred;
+}
+
+.thirdPerson{
+  color:black;
+}
+
+button{
+  width:200px;
+  height:60px;
+  font-size: auto;
+}
+.independent{
+  text-align: center;
+  font-size: x-large;
+}
+.question{
+  text-align: center;
+  font-size: x-large;
+}
+
+
+img{
+  width:400px;
+  height:400px;
+}
+
+.image-wrapper{
+  margin:5px;
+  width:800px;
+  height:400px;
+  border:solid thin  black;
+  border-radius: 10px;
+}
+
+
+.frame{
+  width:800px;
+  text-align: center;
+}
+.frame h1{
+  margin:2px;
+  font-family:fantasy;
+}
+
+.frame p{
+  font-size: 9pt;
+  margin:2px;
+}
+
+.success{
+  text-align: center;
+  font-size: xx-large;
+}
+
+.home-wrapper{
+  width:800px;
+  height:300px;
+  border:black thick groove;
+  margin:5px;
+  padding:3px;
+  border-radius: 10px;
+}
+
+.top-message{
+  width:800px;
+}
+
+.top-menu1{
+  text-align:center;
+  font-size: x-large;
+  display: inline-block;
+  width:300px;
+  height:100px;
+  margin:0px 20px;
+  padding:70px 10px 0px 10px;
+  border:black thin solid;
+  border-radius:3px;
+  background-color:pink;
+  box-shadow: 0 2px 5px black;
+}
+
+.top-menu2{
+  text-align:center;
+  font-size: x-large;
+  display: inline-block;
+  width:300px;
+  height:100px;
+  margin:0px 20px;
+  padding:70px 10px 0px 10px;
+  border:black thin solid;
+  border-radius:3px;
+  background-color:moccasin;
+  box-shadow: 0 2px 5px black;
+}

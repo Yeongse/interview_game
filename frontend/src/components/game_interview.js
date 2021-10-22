@@ -1,3 +1,4 @@
+import "./components.css"
 import React from "react";
 import StartLog     from "./game_startLog";
 import FinishLog    from "./game_finishLog";
