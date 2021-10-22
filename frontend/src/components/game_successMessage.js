@@ -16,7 +16,7 @@ class SuccessMessage extends React.Component{
         if(this.state.phase === 0){
             return(
                 <div className="message-wrapper"　onClick={this.countClick}>
-                    <p>
+                    <p className="thirdPerson">
                     内定獲得！！
                     </p>
             </div>
@@ -25,7 +25,7 @@ class SuccessMessage extends React.Component{
         else{
             return(
                 <div className="message-wrapper" onClick={this.countClick}>
-                    <p>
+                    <p className="thirdPerson">
                         (これでゲームは終了です)
                     </p>
             </div>

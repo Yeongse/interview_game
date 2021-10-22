@@ -62,7 +62,8 @@ class Game extends React.Component{
                 case 4:   return <Interval forChange={this.addTotalPhase}/>
                 case 5:   return <Interview interviewPhase={this.state.totalPhase-3} gameParams={this.state.gameParams} forChangeTrue={this.finishGame} forChangeFalse={this.addTotalPhase}/>;
                           break;
-                case 6:   return <SuccessMessage />;
+                case 6:   return <Interval forChange={this.addTotalPhase}/>
+                case 7:   return <SuccessMessage />;
                           break;
                 case 100: return <FailMessage />;
                           break;
@@ -76,7 +77,7 @@ class Game extends React.Component{
         return(
             <div>
                 <Frame />
-                <Image />
+                <Image phase={this.state.totalPhase}/>
                 <div className="variable">
                     {this.componentController()}
                 </div>

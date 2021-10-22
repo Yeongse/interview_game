@@ -16,9 +16,9 @@ class FeedbackList extends React.Component{
 
     render(){
         return(
-            <div className="feedbackList">
+            <div className="list-wrapper">
                 <header className="listHeader">
-                    <h1>過去のフィードバック</h1>
+                    <h2>過去のフィードバック</h2>
                 </header>
                 <div>
                     {this.state.feedbacks.map((element) => 
