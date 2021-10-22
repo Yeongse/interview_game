@@ -9,7 +9,7 @@ class DamageLog extends React.Component{
     render(){
         return(
             <div onClick={this.props.forChange}>
-                <p>
+                <p className="thirdPerson">
                     {this.props.damage}のダメージ
                 </p>
             </div>

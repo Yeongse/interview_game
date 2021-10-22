@@ -12,7 +12,7 @@ class FinishLog extends React.Component{
             case true:
                 return(
                     <div onClick={this.props.forChangeTrue}>
-                        <p>
+                        <p className="secondPerson">
                             本日はこれにて面接は終了です、お疲れ様でした。
                             また後ほど弊社からのご連絡をお待ちください。
                         </p>
@@ -22,7 +22,7 @@ class FinishLog extends React.Component{
             case false:
                 return(
                     <div onClick={this.props.forChangeFalse}>
-                        <p>
+                        <p className="secondPerson">
                             本日はこれにて面接は終了です、お疲れ様でした。
                             では後日、次の面接に進んでいただきます。
                             次回も頑張ってくださいね、応援しております。

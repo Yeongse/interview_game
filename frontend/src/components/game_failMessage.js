@@ -16,7 +16,7 @@ class FailMessage extends React.Component{
             if(this.state.phase === 0){
                 return(
                     <div className="message-wrapper"　onClick={this.countClick}>
-                        <p>
+                        <p className="thirdPerson">
                             この度は弊社の選考に応募いただきありがとうございました。
                             誠に残念ながら、選考に関しまして貴意に添い兼ねる結果となりました。
                             何卒ご容赦くださるようお願いします。
@@ -27,7 +27,7 @@ class FailMessage extends React.Component{
             else{
                 return(
                     <div className="message-wrapper" onClick={this.countClick}>
-                        <p>
+                        <p className="thirdPerson">
                             (これでゲームは終了です)
                         </p>
                 </div>

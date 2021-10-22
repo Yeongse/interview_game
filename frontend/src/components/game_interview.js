@@ -127,12 +127,7 @@ class Interview extends React.Component{
         }
     }
 
-
-
-
-
     render(){
-        console.log(this.state.gamePhase);
         return this.makeInterview();
     }
 }

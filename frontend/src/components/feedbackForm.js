@@ -29,10 +29,12 @@ class FeedbackForm extends React.Component{
 
     render(){
         return(
-            <div>
-                <h2>フィードバックを記入するフォームです</h2>
+            <div className="form-wrapper">
+                <header className="form-header">
+                    <h2>フィードバックを記入するフォームです</h2>
+                </header>
                 <form onSubmit={this.handleSubmit}>
-                    <label>
+                    <label className="form">
                         フィードバック：
                         <textarea　value={this.state.value} onChange={this.handleChange} />
                     </label>
