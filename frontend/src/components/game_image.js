@@ -1,3 +1,4 @@
+import "./components.css"
 import React            from "react";
 import characterImage   from "../images/student.png";
 import hrImage          from "../images/hr.png";

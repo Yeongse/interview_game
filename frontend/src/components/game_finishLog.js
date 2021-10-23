@@ -1,3 +1,4 @@
+import "./components.css"
 import React from "react";
 
 //props:isLose, forChange
@@ -11,7 +12,7 @@ class FinishLog extends React.Component{
         switch(this.props.isLose){
             case true:
                 return(
-                    <div onClick={this.props.forChangeTrue}>
+                    <div className="message-wrapper" onClick={this.props.forChangeTrue}>
                         <p className="secondPerson">
                             本日はこれにて面接は終了です、お疲れ様でした。
                             また後ほど弊社からのご連絡をお待ちください。
@@ -21,7 +22,7 @@ class FinishLog extends React.Component{
                 
             case false:
                 return(
-                    <div onClick={this.props.forChangeFalse}>
+                    <div className="message-wrapper" onClick={this.props.forChangeFalse}>
                         <p className="secondPerson">
                             本日はこれにて面接は終了です、お疲れ様でした。
                             では後日、次の面接に進んでいただきます。

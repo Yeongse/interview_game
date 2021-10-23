@@ -1,5 +1,5 @@
+import "./components.css"
 import React from "react";
-
 
 class SuccessMessage extends React.Component{
     constructor(props){
@@ -16,18 +16,22 @@ class SuccessMessage extends React.Component{
         if(this.state.phase === 0){
             return(
                 <div className="message-wrapper"　onClick={this.countClick}>
-                    <p className="thirdPerson">
-                    内定獲得！！
-                    </p>
+                    <div className="success">
+                        <p className="thirdPerson">
+                        内定獲得！！
+                        </p>
+                    </div>
             </div>
             );
         }
         else{
             return(
                 <div className="message-wrapper" onClick={this.countClick}>
-                    <p className="thirdPerson">
-                        (これでゲームは終了です)
-                    </p>
+                    <div className="independent">
+                        <p className="thirdPerson">
+                            (これでゲームは終了です)
+                        </p>
+                    </div>
             </div>
             );
         }

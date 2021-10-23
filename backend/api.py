@@ -117,7 +117,6 @@ def fetch_json_data():
 def start():
   return 0
 
-#一応ここもできた
 @app.route("/game",methods=["GET"])
 def return_game_params():
   character_json, company_json, member_json, question_json, answer_json = fetch_json_data()
@@ -129,8 +128,6 @@ def return_game_params():
                   "answers":answer_json})
 
 
-
-#ここについては完成
 @app.route("/feedback",methods=["GET","POST"])
 def show_and_take_feedback():
   if(request.method == "POST"):

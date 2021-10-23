@@ -1,3 +1,4 @@
+import "./components.css"
 import React from "react";
 
 //props:character, company, forChange
@@ -18,9 +19,9 @@ class FirstMessage extends React.Component{
             return(
                 <div className="message-wrapper"　onClick={this.countClick}>
                     <p className="firstPerson">
-                        私は{this.props.character.background}の{this.props.character.name}です。
-                        今回は{this.props.company.genre}の{this.props.company.name}にエントリーします！
-                        内定獲得を目指してがんるぞ！
+                        <p>私は{this.props.character.background}の{this.props.character.name}です。</p>
+                        <p>今回は{this.props.company.genre}の{this.props.company.name}にエントリーします！</p>
+                        <p>内定獲得を目指してがんるぞ！</p>
                     </p>
             </div>
             );
@@ -30,8 +31,10 @@ class FirstMessage extends React.Component{
             return(
                 <div className="message-wrapper" onClick={this.countClick}>
                     <p className="third-person">
-                        名前：{this.props.character.name}、学歴：{this.props.character.background}、スキル：{this.props.character.skill}、
-                        人物像:{this.props.character.personality}
+                        <p>名前：{this.props.character.name}</p>
+                        <p>学歴：{this.props.character.background}</p>
+                        <p>スキル：{this.props.character.skill}</p>
+                        <p>人物像:{this.props.character.personality}</p>
                     </p>
             </div>
             );
@@ -39,9 +42,11 @@ class FirstMessage extends React.Component{
         else{
             return(
                 <div className="message-wrapper" onClick={this.props.forChange}>
-                    <p className="firstPerson">
-                        (次に進んでください)
-                    </p>
+                    <div className="independent">
+                        <p className="thirdPerson">
+                            (次に進んでください)
+                        </p>
+                    </div>
                 </div>
             )
         }

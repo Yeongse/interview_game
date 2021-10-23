@@ -1,3 +1,4 @@
+import "./components.css"
 import React from "react";
 import axios from "axios";
 import { Link } from 'react-router-dom'
@@ -81,7 +82,7 @@ class Game extends React.Component{
                 <div className="variable">
                     {this.componentController()}
                 </div>
-                <Link to="/" className="top_menu">ホームに戻る</Link>
+                <Link to="/" className="go-home">ホームに戻る</Link>
             </div>
         )
     }
