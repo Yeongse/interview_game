@@ -34,13 +34,13 @@ class FeedbackForm extends React.Component{
                 <header className="form-header">
                     <h2>フィードバックを記入するフォームです</h2>
                 </header>
-                <form onSubmit={this.handleSubmit}>
-                    <label className="form">
-                        フィードバック：
-                        <textarea　value={this.state.value} onChange={this.handleChange} />
-                    </label>
-                <input type="submit" value="Submit" />
-                </form>
+                <div className="feedbackForm">
+                    <form onSubmit={this.handleSubmit}>
+                            <div className="comment">フィードバック：</div>
+                            <textarea　value={this.state.value} onChange={this.handleChange} />    
+                    <input type="submit" value="Submit" />
+                    </form>
+                </div>
             </div>
         )
     }

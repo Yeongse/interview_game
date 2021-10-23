@@ -7,10 +7,12 @@ import { Link } from 'react-router-dom'
 class Feedback extends React.Component{
     render(){
         return(
-            <div className="feedback-wrapper">
-              <FeedbackList />
-              <FeedbackForm />
-              <Link to="/" className="top_menu">ホームに戻る</Link>
+            <div className="all-wrapper">
+                <div className="feedback-wrapper">
+                <FeedbackList />
+                <FeedbackForm />
+                </div>
+                <Link to="/" className="go-home">ホームに戻る</Link>
             </div>
         )
     }

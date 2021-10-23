@@ -7,7 +7,7 @@ class Frame extends React.Component{
         return(
             <div className="frame">
                 <h1>面接ゲーム</h1>
-                <p>下の四角いところをクリックするとゲームが進むよ</p>
+                <p>下の四角いところをクリックするとゲームが進むよ(画面の再読み込みはしないでね)</p>
             </div>
         )
     }

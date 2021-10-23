@@ -1,32 +1,87 @@
+/*FeedbackでのCSS*/
+.all-wrapper{
+  width: 800px;
+  margin-top:5px;
+  margin-left:5px;
+}
+.go-home{
+  margin:5px 5px 0px 5px;
+}
 .feedback-wrapper{
   width: 800px;
+  height:auto;
   background: #fff;
   border:solid thin  black;
   border-radius: 5px;
   display: inline-block;
 }
-
-.list-wrapper{
-  border:solid thin  black;
+h2{
+  margin:3px 5px 3px 5px;
 }
-
-.form-wrapper{
-  border:solid thin  black;
-}
-
 .list-header{
-  padding:400px,50px;
-  background-color: cadetblue;
+  margin:0px;
+  padding:0px;
+  background-color:black;
+  color:white;
   text-align:center;
 }
-
+.card{
+  width:780px;
+  height:50px;
+  font-size: 11pt;
+  margin:8px 5px 8px 5px;
+  padding:0px 3px 1px 3px;
+  border: black thin solid;
+  border-radius: 6px;
+}
+.cardContent{
+  margin-top:0px;
+  padding:0px 3px 1px 3px;
+} 
+.form-wrapper{
+  height:120px;
+}
 .form-header{
-  margin:10px,50px;
-  border:solid thin  black;
+  margin:0px,50px;
+  margin-bottom: 0px;
   text-align:center;
+  background-color:black;
+  color:white;
+}
+.feedbackForm{
+  width:800px;
+  margin-top:0px;
+  height:60px;
+  display: inline-block;
+}
+form{
+  margin:10px 5px 10px 5px;
+  height:60px;
+}
+textarea{
+  margin-top:0px;
+  margin-right:20px;
+  width:300px;
+  height:50px;
+  display:table-cell;
+  vertical-align:top;
+}
+input{
+  margin-right:30px;
+  width:100px;
+  height:55px;
+  display:table-cell;
+  vertical-align:top;
+}
+.comment{
+  margin-top:0px;
+  margin-right:10px;
+  display:inline-block;
+  vertical-align:top;
 }
 
 
+/*GameでのCSS*/
 .message-wrapper{
   margin: 5px;
   border:solid thin  black;
@@ -36,43 +91,43 @@
   white-space: pre-wrap;
   background-color:wheat;
 }
-
 .message-wrapper p{
   margin: 3px;
 }
-
 .firstPerson{
   color:darkblue;
 }
-
 .secondPerson{
   color:darkred;
 }
-
 .thirdPerson{
   color:black;
 }
-
 button{
-  width:200px;
+  width:190px;
+  margin:30px 5px 30px 5px;
   height:60px;
   font-size: auto;
+  border-radius: 5px;
 }
 .independent{
+  padding:45px 10px 0px 10px;
   text-align: center;
   font-size: x-large;
 }
 .question{
+  padding:45px 10px 0px 10px;
   text-align: center;
   font-size: x-large;
 }
-
-
+.success{
+  text-align: center;
+  font-size: xx-large;
+}
 img{
   width:400px;
   height:400px;
 }
-
 .image-wrapper{
   margin:5px;
   width:800px;
@@ -80,40 +135,53 @@ img{
   border:solid thin  black;
   border-radius: 10px;
 }
-
-
 .frame{
+  margin-top:5px;
   width:800px;
   text-align: center;
 }
 .frame h1{
+  padding:0px 300px 0px 300px;
   margin:2px;
-  font-family:fantasy;
+  font-family:monospace;
 }
-
 .frame p{
   font-size: 9pt;
   margin:2px;
 }
 
-.success{
-  text-align: center;
-  font-size: xx-large;
-}
-
+/*HomeでのCSS*/
 .home-wrapper{
   width:800px;
-  height:300px;
+  height:330px;
   border:black thick groove;
   margin:5px;
   padding:3px;
   border-radius: 10px;
 }
-
 .top-message{
+  text-align: center;
+  font-family: initial;
   width:800px;
+  margin-bottom: 0px;
 }
-
+.top-message h1{
+  padding-top:0px;
+  margin-bottom:0px;
+}
+.sub-title-wrapper{
+  margin-top:0px;
+  text-align:center;
+  padding:0px 235px;
+}
+.sub-title{
+  padding-top:0px;
+  padding-bottom:0px;
+  border-bottom: firebrick thick double;
+}
+.top-menu-wrapper{
+  padding:0px 38px;
+}
 .top-menu1{
   text-align:center;
   font-size: x-large;
@@ -127,7 +195,6 @@ img{
   background-color:pink;
   box-shadow: 0 2px 5px black;
 }
-
 .top-menu2{
   text-align:center;
   font-size: x-large;
@@ -141,3 +208,4 @@ img{
   background-color:moccasin;
   box-shadow: 0 2px 5px black;
 }
+
