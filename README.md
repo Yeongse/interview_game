@@ -40,7 +40,7 @@
     /app/backend # python api.py
     ```
 
-#### フロントエンドを動かす
+##### フロントエンドを動かす
     ターミナル上でinterview_game/frontendの階層までいき、そこでnpm startと打ってEnterを押すと動きます。
     ```
     ~/interview_game/frontend % npm start
