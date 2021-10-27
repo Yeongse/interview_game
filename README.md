@@ -35,13 +35,17 @@
     ```
 
 3. コンテナに入ってapiの実行
+    
     コンテナ内に入り、/app/backendの階層に行き、以下のコマンドを打つことでバックエンドの準備は完了です。
     ```
     /app/backend # python api.py
     ```
+    
+#### フロントエンドを動かす
 
-##### フロントエンドを動かす
-    ターミナル上でinterview_game/frontendの階層までいき、そこでnpm startと打ってEnterを押すと動きます。
+1. アプリケーションの起動
+    
+    ターミナル上でinterview_game/frontendの階層に行き、以下のコマンドを打つとアプリが起動します。勝手にウィンドウも開かれると思います。
     ```
     ~/interview_game/frontend % npm start
     ```
