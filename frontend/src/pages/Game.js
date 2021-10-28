@@ -3,13 +3,13 @@ import React from "react";
 import axios from "axios";
 import { Link } from 'react-router-dom'
 
-import Image          from "./game_image";
-import Frame          from "./frame";
-import FirstMessage   from "./game_firstMessage";
-import Interview      from "./game_interview"
-import Interval       from "./game_interval.js"
-import SuccessMessage from "./game_successMessage";
-import FailMessage    from "./game_failMessage";
+import Image          from "../components/game_image";
+import Frame          from "../components/game_frame";
+import FirstMessage   from "../components/game_firstMessage";
+import Interview      from "../components/game_interview"
+import Interval       from "../components/game_interval.js"
+import SuccessMessage from "../components/game_successMessage";
+import FailMessage    from "../components/game_failMessage";
 
 
 

@@ -1,7 +1,7 @@
 import "./components.css"
 import React from "react";
-import FeedbackForm from "./feedbackForm";
-import FeedbackList from "./feedbackList";
+import FeedbackForm from "../components/feedbackForm";
+import FeedbackList from "../components/feedbackList";
 import { Link } from 'react-router-dom'
 
 class Feedback extends React.Component{
