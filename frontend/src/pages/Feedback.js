@@ -1,4 +1,4 @@
-import "./components.css"
+import "../components/components.css"
 import React from "react";
 import FeedbackForm from "../components/feedbackForm";
 import FeedbackList from "../components/feedbackList";

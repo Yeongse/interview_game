@@ -123,7 +123,7 @@ class Interview extends React.Component{
                     return <DamageLog damage={damage} forChange={()=>this.setState({gamePhase:this.state.gamePhase+1,totalDamage:this.state.totalDamage+damage})}/>; 
                     break;
             case 9: isLose = this.state.totalDamage < MEMBER.HP
-                    return <FinishLog isLose={isLose} forChangeTrue={this.props.forChangeTrue}　forChangeFalse={this.props.forChangeFalse}/>; 
+                    return <FinishLog isLose={isLose} phase={this.props.interviewPhase} forChangeTrue={this.props.forChangeTrue}　forChangeFalse={this.props.forChangeFalse}/>; 
                     break;
         }
     }
