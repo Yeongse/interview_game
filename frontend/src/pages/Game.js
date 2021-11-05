@@ -23,7 +23,7 @@ class Game extends React.Component{
     }
 
     componentDidMount(){
-        axios.get("http://localhost:5000/game").then(res => {
+        axios.get("https://interviewgamebackend.herokuapp.com/game").then(res => {
             const fetched_data = res.data;
             this.setState({gameParams:fetched_data});
         })

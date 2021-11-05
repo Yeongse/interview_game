@@ -9,7 +9,7 @@ class FeedbackList extends React.Component{
     }
 
     componentDidMount(){
-        axios.get("http://localhost:5000/feedback").then(res => {
+        axios.get("https://interviewgamebackend.herokuapp.com/feedback").then(res => {
             const fetched_data = res.data;
             this.setState({feedbacks:fetched_data.comments});
         })

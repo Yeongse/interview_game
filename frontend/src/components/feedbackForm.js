@@ -21,7 +21,7 @@ class FeedbackForm extends React.Component{
        const data = {
            comments:this.state.value
        }
-       axios.post("http://localhost:5000/feedback", data).then((res)=>{
+       axios.post("https://interviewgamebackend.herokuapp.com/feedback", data).then((res)=>{
        console.log(res);
        this.setState({value:""});
        })
