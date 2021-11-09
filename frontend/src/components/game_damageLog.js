@@ -12,7 +12,7 @@ class DamageLog extends React.Component{
             <div className="message-wrapper damage" onClick={this.props.forChange}>
                 <div className="independent">
                     <p className="thirdPerson">
-                        {this.props.damage}のダメージ
+                        面接官に{this.props.damage}のダメージ
                     </p>
                 </div>
             </div>
