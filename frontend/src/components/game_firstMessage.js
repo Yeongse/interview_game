@@ -21,7 +21,7 @@ class FirstMessage extends React.Component{
                     <p className="firstPerson">
                         <p>私は{this.props.character.background}の{this.props.character.name}です。</p>
                         <p>今回は{this.props.company.genre}の{this.props.company.name}にエントリーします！</p>
-                        <p>内定獲得を目指してがんるぞ！</p>
+                        <p>内定獲得を目指してがんばるぞ！</p>
                     </p>
             </div>
             );
